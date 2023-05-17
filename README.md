@@ -21,6 +21,7 @@ THEN I am able to successfully create and delete reactions to thoughts
 and add and remove friends to a user’s friend list<br/>
 
 ## The following is a screenshot of the final product:
+![alt text](./utils/Thoughts.jpg)
 
 ## Click [here](https://github.com/dolivafig/SocialApp) to see the repo on gitHub.
 ## Click [here]() to view a demo of the app working.
