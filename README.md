@@ -24,4 +24,4 @@ and add and remove friends to a user’s friend list<br/>
 ![alt text](./utils/Thoughts.jpg)
 
 ## Click [here](https://github.com/dolivafig/SocialApp) to see the repo on gitHub.
-## Click [here]() to view a demo of the app working.
+## Click [here](https://drive.google.com/file/d/1wPOdEjqFJgpbSG2Lu07PA4pA-p-aiKBK/view) to view a demo of the app working on Insomnia.
