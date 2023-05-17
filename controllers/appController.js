@@ -83,7 +83,19 @@ module.exports = {
       )
       .catch((err) => res.status(500).json(err));
   },
+  getSingleThought(req, res) {
+    Thought.findOne({ _id: req.params.thoughtId })
+      .select('-__v')
+      .then((thoughts) =>
+        !thoughts
+          ? res.status(404).json({ message: 'No thoughts with that ID' })
+          : res.json(thoughts)
+      )
+      .catch((err) => res.status(500).json(err));
+  },
   addReaction(req, res) {
+    console.log('You are adding a Reaction');
+    console.log(req.body);
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
       { $addToSet: { reactions: req.body } },
@@ -94,7 +106,10 @@ module.exports = {
           ? res.status(404).json({ message: 'No thought found with this id!' })
           : res.json(thought)
       )
-      .catch((err) => res.status(500).json(err));
+      .catch((err) => {
+        res.status(500).json(err);
+        console.log(err);
+  });
   },
   removeReaction(req, res) {
     Thought.findOneAndUpdate(
